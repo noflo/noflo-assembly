@@ -1,30 +1,9 @@
-# @noflo/assembly
+# noflo-assembly — moved
 
-Industrial approach to writing NoFlo applications
+This package has been ingested into the NoFlo monorepo and is now
+published as **[@noflo/assembly](https://www.npmjs.com/package/@noflo/assembly)**.
 
-Assembly Line provides message-relay conventions for NoFlo programs:
-a shared message envelope (`msg.errors` for error accumulation), a
-small library of validation helpers, and a `Component` base class where
-components either declare a `relay(msg, output)` hook for single-input
-processing or a `handle(input, output)` hook for multi-port ones.
-
-## Goals
-
-- Build your application like a real world production
-- Make development with [NoFlo](https://noflojs.org) more fun by reducing component boilerplate and the complexity of graphs
-- Follow best practices for concurrency, error handling, etc. to avoid common pitfalls
-- ES modules first
-
-## Usage
-
-Install the package:
-
-    npm install @noflo/assembly
-
-Import the helpers and the component base class:
-
-```js
-import { Component, fail, failed, fork, merge } from "@noflo/assembly";
-```
-
-An [example](https://github.com/noflo/noflo-assembly/tree/master/example) is embedded into this repository: how to build a car with NoFlo, from order to release.
+- Source: [noflo/noflo](https://github.com/noflo/noflo) at `packages/assembly`
+- The multi-port component hook is named `processMessage(input, output)` in the 2.x line
+- The unscoped `noflo-assembly` npm name will receive a deprecation
+  notice pointing here when the NoFlo 2.x line reaches stable
